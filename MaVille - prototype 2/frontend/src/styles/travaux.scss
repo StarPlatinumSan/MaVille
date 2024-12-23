@@ -1,0 +1,127 @@
+@use "./variables" as *;
+
+.travauxDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding: 3rem;
+	border-radius: 8px;
+	background-color: darken($color: rgb(230, 240, 255), $amount: 2%);
+
+	ul {
+		list-style: none;
+	}
+}
+
+.travauxLoading {
+	color: $charcoal;
+}
+
+.travauxInput {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	padding: 0.8rem;
+	border-radius: 8px;
+	font-size: 1rem;
+	color: #333;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+
+	&:focus {
+		outline: none;
+		border: 2px solid $blueMontreal;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+	}
+
+	&::placeholder {
+		color: rgba(0, 0, 0, 0.5);
+		letter-spacing: 0.1rem;
+		font-size: 0.9rem;
+	}
+}
+
+.travauxTitreMain {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bold;
+	color: darkblue;
+}
+
+.travauxTitre {
+	text-align: left;
+	font-size: clamp(1.5rem, 2.5vw, 2rem);
+	font-weight: bold;
+	color: $blueMontreal;
+}
+
+.travauxInfo {
+	text-align: left;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: $charcoal;
+}
+
+.separation {
+	border-top: 1px solid $charcoal;
+	height: 2px;
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.travauxStrong {
+	font-weight: 900;
+	font-size: 1.7rem;
+}
+
+.buttonsTemps {
+	display: flex;
+	justify-content: center;
+
+	* {
+		flex: 1;
+		width: clamp(400px, 35vw, 400px);
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	.buttonsTemps {
+		button {
+			width: clamp(100px, 30vw, 300px);
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.travauxDiv {
+		padding: 1rem;
+	}
+
+	.travauxTitreMain {
+		font-size: 1.5rem;
+	}
+
+	.travauxTitre {
+		font-size: 1.2rem;
+	}
+
+	.travauxInfo {
+		font-size: 1rem;
+	}
+
+	.travauxStrong {
+		font-size: 1rem;
+	}
+
+	.buttonsTemps {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		button {
+			width: clamp(300px, 50vw, 500px);
+		}
+	}
+}

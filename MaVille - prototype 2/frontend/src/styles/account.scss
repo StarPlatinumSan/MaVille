@@ -1,0 +1,509 @@
+@use "../styles/variables" as *;
+
+* {
+	font-family: "Host Grotesk", sans-serif;
+}
+
+.accountDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	position: relative;
+	color: whitesmoke;
+	min-height: 100vh;
+	background-color: rgb(230, 240, 255);
+	z-index: 1;
+
+	.scrollTopButton {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		z-index: 10;
+		background-color: rgb(29, 29, 29);
+		color: white;
+		border-radius: 5px;
+		padding: 1rem;
+		border: none;
+		opacity: 0.7;
+		z-index: 100000;
+		transition: all 0.2s ease;
+
+		&:hover {
+			cursor: pointer;
+			transform: translateY(-5px);
+			opacity: 1;
+		}
+	}
+}
+
+.accountHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $blueMontreal;
+	width: 100%;
+	padding: 3rem;
+	gap: 1rem;
+}
+
+.accountGreeting {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	font-size: clamp(0.6rem, 1.5vw, 1rem);
+}
+
+.accountUsername {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+
+	span {
+		font-size: clamp(0.6rem, 1.5vw, 1rem);
+	}
+
+	svg {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.accountContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 80vw;
+}
+
+.select {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 1rem;
+	padding: 2rem;
+	position: relative;
+
+	.options {
+		position: relative;
+		width: clamp(100px, 17vw, 500px);
+		height: 240px;
+		border-radius: 16px;
+		background-color: $blueMontreal;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+		&:hover {
+			transform: scale(1.05);
+			box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+		}
+
+		h3 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: clamp(1rem, 1.5vw, 1.2rem);
+			padding: 1rem;
+			height: 100px;
+			color: white;
+			z-index: 1;
+			background-color: rgba(0, 50, 124, 0.8);
+		}
+
+		.optionsImg {
+			position: absolute;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			align-self: center;
+			justify-self: center;
+
+			.optionsOpacity {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+		}
+	}
+}
+
+.accountTitle {
+	cursor: pointer;
+	transition: all 0.1s ease;
+	font-size: clamp(1.5rem, 2vw, 2rem);
+
+	display: flex;
+	text-align: left;
+	gap: 0.5rem;
+
+	svg {
+		align-self: center;
+		width: 30px;
+		height: 30px;
+	}
+
+	&:hover {
+		color: gold;
+	}
+}
+
+.accountBase {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: $charcoal;
+	background-color: rgb(230, 240, 255);
+	padding: 1rem;
+
+	.titleBase {
+		font-size: 2.5rem;
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+
+	.txt {
+		font-size: 1.5rem;
+	}
+}
+
+.accountControl {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+}
+
+.notification {
+	background-image: url(../../public/notif.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 50px;
+	height: 55px;
+	background-color: inherit;
+	border: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	position: relative;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	.notifs {
+		position: absolute;
+		top: -5px;
+		right: -5px;
+		background-color: red;
+		color: white;
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.8rem;
+		font-weight: bold;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	.notifsInfo {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: white;
+		color: $charcoal;
+		padding: 1rem;
+		font-size: 0.9rem;
+		max-height: 70vh;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, transform 0.3s ease;
+		overflow-y: auto;
+		margin-top: 1rem;
+		min-width: 20rem;
+		z-index: 100;
+
+		&.visible {
+			opacity: 1;
+			transform: translate(-50%, 0);
+			visibility: visible;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: -10px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid white;
+		}
+	}
+}
+
+.menuMobile {
+	display: none;
+}
+
+.sideBar {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 1rem;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 90%;
+	min-height: 100%;
+	padding: 0.5rem;
+	background-color: $blueMontreal;
+	color: white;
+	z-index: 10;
+	transform: translateX(100%);
+	transition: transform 0.3s ease;
+
+	.notification {
+		width: 60px;
+		height: 65px;
+		margin-top: 120px;
+	}
+
+	.btn {
+		width: 100%;
+		max-width: 400px;
+	}
+
+	&.open {
+		transform: translateX(0);
+	}
+}
+
+#listeTravauxImg {
+	background-image: url(../../public/listeTravaux.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#entravesImg {
+	background-image: url(../../public/entraves.jpg);
+	background-position: right center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#requeteImg {
+	background-image: url(../../public/requetes.jpg);
+	background-position: left center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#plageImg {
+	background-image: url(../../public/plage.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#mesRequetesImg {
+	background-image: url(../../public/mesRequetes.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.closeSideBar {
+	background-image: url(../../public/close.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	background-size: 100%;
+	width: 60px;
+	height: 60px;
+	border: none;
+	background-color: inherit;
+	color: white;
+}
+
+@media screen and (max-width: 900px) {
+	.menuMobile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-image: url(../../public/menu.svg);
+		gap: 1rem;
+		height: 40px;
+		width: 40px;
+		border: none;
+		background-color: inherit;
+		color: white;
+	}
+
+	.accountContainer {
+		max-width: 100vw;
+	}
+
+	.accountTitle {
+		font-size: 1.5rem;
+		text-align: center;
+
+		svg {
+			display: none;
+		}
+	}
+
+	.accountUsername {
+		svg {
+			display: none;
+		}
+	}
+
+	.accountGreeting {
+		gap: 0.5rem;
+	}
+
+	.accountHeader {
+		justify-content: space-between;
+		padding: 1rem;
+		min-height: 100px;
+		gap: 0.5rem;
+	}
+
+	.accountControl {
+		gap: 1rem;
+	}
+
+	.notification {
+		width: 30px;
+		height: 30px;
+	}
+
+	.accountDiv {
+		.btn {
+			padding: 1rem;
+			font-size: 1rem;
+			max-width: 80%;
+		}
+	}
+
+	.travauxDiv {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	.select {
+		flex: 1;
+		flex-wrap: wrap;
+
+		.options {
+			width: clamp(300px, 80vw, 600px);
+			height: fit-content;
+		}
+	}
+
+	.notification {
+		.notifsInfo {
+			width: clamp(220px, 70vw, 440px);
+			min-width: auto;
+			max-height: 400px;
+			left: 0;
+
+			.btn {
+				padding: 0.2rem;
+				max-width: 60%;
+			}
+		}
+	}
+
+	.hiddenMobile {
+		display: none;
+	}
+
+	.sideBarDiv {
+		span {
+			text-align: center;
+			font-size: clamp(1rem, 5vw, 2rem);
+			max-width: 100%;
+		}
+	}
+
+	.sideBar {
+		.notification {
+			.notifsInfo {
+				left: 50%;
+
+				&:active {
+					transform: translate(-50%, 0);
+				}
+			}
+		}
+
+		.deconnectMobile {
+			position: absolute;
+			bottom: 75px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.notifPlaceholder {
+	color: $charcoal;
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding: 0.5rem;
+}
+
+.notifObject {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	align-items: center;
+	border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
+	border-top: rgba(0, 0, 0, 0.1) solid 1px;
+	padding: 0.5rem;
+
+	.btnCloseNotif {
+		border: none;
+		background-color: inherit;
+		background-image: url(../../public/notifClose.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 150%;
+		fill: black;
+		stroke: black;
+		padding: 0.5rem;
+		transition: transform 0.1s ease;
+
+		&:hover {
+			cursor: pointer;
+			transform: scale(1.3);
+		}
+	}
+}

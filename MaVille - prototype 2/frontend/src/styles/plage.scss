@@ -1,0 +1,73 @@
+@use "./variables" as *;
+
+.plageMain {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	justify-content: center;
+	padding: 2rem;
+	border-radius: 8px;
+	background-color: rgb(219.8, 233.88, 255);
+}
+
+.text-black {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	justify-content: center;
+	padding: 1rem;
+	margin-bottom: 100px;
+
+	h2 {
+		text-align: center;
+	}
+}
+
+.selectionPlage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+
+	input {
+		padding: 0.5rem;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+		background-color: #f8f9fa;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		cursor: pointer;
+	}
+
+	select {
+		padding: 0.5rem;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+		background-color: #f8f9fa;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		cursor: pointer;
+	}
+}
+
+.plagesList {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	list-style: none;
+
+	li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	li > * {
+		padding: 0.5rem;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.selectionPlage {
+		flex-direction: row;
+	}
+}

@@ -1,0 +1,348 @@
+@use "./variables" as *;
+
+* {
+  font-family: "Host Grotesk", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../../public/montreal.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  min-height: 100%;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  background-color: rgba(0, 55, 138, 0.6);
+}
+
+.titleMain {
+  font-size: 3rem;
+  padding: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: white;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.txtMain {
+  width: 95%;
+  color: white;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.buttonMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 20px;
+  padding: 1.7rem;
+  background-color: #ffffff;
+  color: #555555;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $blueMontrealOpacity;
+    opacity: 0.7;
+    color: white;
+  }
+}
+
+.authMain {
+  background-image: url(../../public/login.png);
+  background-repeat: no-repeat;
+  background-position: 0.3rem center;
+  background-size: 25px;
+}
+
+.creerMain {
+  background-color: $blueMontreal;
+  color: white;
+}
+
+.elseConnect {
+  padding: 15px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+    margin: 0 10px;
+  }
+}
+
+.authSection {
+  background-color: $blueMontrealOpacity;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+
+  .btnRetour {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+  }
+}
+
+.selectionType {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  .btn {
+    width: 90%;
+  }
+}
+
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.groupAuth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.authDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slide-up 0.5s ease forwards;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+
+    * {
+    }
+
+    input {
+      width: 100%;
+      max-width: 500px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 0.8rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #333;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border: 2px solid $blueMontreal;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.5);
+        letter-spacing: 0.1rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    label {
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  .authTitle {
+    font-size: 2.5rem;
+    color: white;
+  }
+
+  .authInput {
+    width: 100%;
+    height: 50px;
+  }
+
+  .keyInput {
+    padding: 0.8rem;
+
+    &::placeholder {
+      color: red;
+    }
+  }
+
+  .birthInput {
+    width: 50%;
+  }
+
+  .authButton {
+    min-width: 10rem;
+    background-color: $blueMontreal;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid white;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(0, 44, 110);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.authSelect {
+  max-width: 500px;
+  padding: 0.5rem;
+}
+
+.btnFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.75rem;
+  justify-self: right;
+}
+
+.btnFooter input[type="checkbox"] {
+  position: relative;
+  background-color: #ffffff;
+  border: none;
+  width: 80px;
+  height: 40px;
+  appearance: none;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 2px 2px #3333331a, inset 0 -2px 2px #ffffff1a;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btnFooter input:checked[type="checkbox"] {
+  background-color: rgba(0, 55, 138, 0.8);
+  box-shadow: inset 0 2px 2px #ffffff33, inset 0 -2px 2px #ffffff33;
+}
+
+.btnFooter input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(to bottom, rgb(232, 241, 255), rgba(159, 198, 255, 0.8));
+  transition: 0.5s;
+  box-shadow: inset 0 2px 2px #ffffff, inset 0 -2px 2px #ffffff;
+  border: 2px solid rgb(166, 203, 255);
+}
+
+.btnFooter input:checked[type="checkbox"]::before {
+  background: linear-gradient(to bottom, rgb(0, 55, 138), rgb(0, 55, 138));
+  box-shadow: inset 0 2px 2px #ffffff33, inset 0 -2px 2px #ffffff33;
+  transform: translateX(40px);
+  border: 2px solid #dadada;
+}
+
+.travauxPopup {
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 600px) {
+  .authMain {
+    background-position: 2rem center;
+    background-size: 40px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .leftSide {
+    background-color: rgba(0, 55, 138, 0.7);
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .txtMain {
+    padding: 1rem;
+  }
+
+  .leftSide {
+    width: 40vw;
+  }
+
+  .groupAuth {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .registerMobile {
+    margin-top: 3rem;
+  }
+
+  .authDiv .authTitle {
+    font-size: clamp(1.5rem, 10vw, 2rem);
+  }
+}

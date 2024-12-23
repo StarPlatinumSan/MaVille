@@ -1,0 +1,72 @@
+[
+	{
+		"titre": "Réparation des trottoirs",
+		"description": "Réparer les fissures et les trous dans les trottoirs pour assurer la sécurité des piétons. Remplacement des sections endommagées si nécessaire.",
+		"type": "Réfection de trottoirs",
+		"adresse": "1234 Rue Principale",
+		"date": "2025-01-15",
+		"notif": false,
+		"email": "levi.ackerman@gmail.com",
+		"hasSoumission": false,
+		"isAccepted": true,
+		"id": "ffd7f1a0-fe06-4b0e-a05d-b853c3f40c03",
+		"isConfirmed": true,
+		"intervenant": "andrei.bituleanu@yahoo.com"
+	},
+	{
+		"titre": "Plantation d'arbres",
+		"description": "Planter 15 nouveaux arbres dans le parc local pour améliorer l’esthétique et offrir plus d’ombre aux visiteurs.",
+		"type": "Aménagement paysager",
+		"adresse": "Parc Verdure, Rue des Lilas",
+		"date": "2024-12-20",
+		"notif": false,
+		"email": "levi.ackerman@gmail.com",
+		"hasSoumission": false,
+		"isAccepted": false,
+		"id": "e7617d56-6d87-4b87-b0de-890616028b10",
+		"isConfirmed": false,
+		"intervenant": null
+	},
+	{
+		"titre": "Installation d’un nouvel éclairage public",
+		"description": "Installer des lampadaires LED modernes le long de l’avenue pour améliorer la visibilité nocturne.",
+		"type": "Éclairage public",
+		"adresse": "Avenue Lumière",
+		"date": "2025-03-05",
+		"notif": false,
+		"email": "caitlyn@hotmail.com",
+		"hasSoumission": true,
+		"isAccepted": true,
+		"id": "b08b726b-96ca-47a8-8222-96d883dc1ea6",
+		"isConfirmed": false,
+		"intervenant": "admin@villedemontreal.ca"
+	},
+	{
+		"titre": "Réfection de la toiture d’un centre communautaire",
+		"description": "Remplacer les matériaux de toiture endommagés et assurer l'étanchéité avant l’arrivée des intempéries hivernales.",
+		"type": "Travaux de toiture",
+		"adresse": "Centre communautaire Ville-Marie, 5678 Boulevard Principal",
+		"date": "2025-01-25",
+		"notif": false,
+		"email": "jotaro.kujo@gmail.com",
+		"hasSoumission": false,
+		"isAccepted": false,
+		"id": "2506e334-f6a9-47e9-8ed5-6300f2385bf2",
+		"isConfirmed": false,
+		"intervenant": null
+	},
+	{
+		"titre": "Mise à jour des infrastructures de jeux pour enfants",
+		"description": "Installer de nouveaux modules de jeux sécuritaires et modernes dans l’aire de jeux du parc.",
+		"type": "Infrastructures de jeux",
+		"adresse": "Parc des Enfants, Rue Arc-en-Ciel",
+		"date": "2026-02-20",
+		"notif": false,
+		"email": "gojo.satoru@yahoo.com",
+		"hasSoumission": true,
+		"isAccepted": false,
+		"id": "4dabd579-abb4-4abf-9b28-0da139c0d1f1",
+		"isConfirmed": false,
+		"intervenant": "god@gmail.com"
+	}
+]

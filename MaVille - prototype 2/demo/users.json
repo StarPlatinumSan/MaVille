@@ -1,0 +1,263 @@
+[
+	{
+		"username": "admin",
+		"password": "$2a$10$yMsF5n1jZvaVREQsTHJReezrty.RC2NsojsObSXd2bHlt/OCUai3q",
+		"email": "admin@villedemontreal.ca",
+		"phone": null,
+		"address": null,
+		"codePostal": null,
+		"quartier": null,
+		"key": "000",
+		"age": 25,
+		"notifications": [],
+		"plagesHoraires": [],
+		"typeIntervenant": "Entreprise privé"
+	},
+	{
+		"username": "Andrei Bituleanu",
+		"password": "$2a$10$i1P3oKKv8xfY0Mil8IrM6OLYSJ5y4KClu3wCBjb/x5t3fFD3.r97O",
+		"email": "andrei.bituleanu@yahoo.com",
+		"phone": null,
+		"address": null,
+		"codePostal": null,
+		"quartier": null,
+		"key": "bit",
+		"age": 20,
+		"notifications": [],
+		"plagesHoraires": [],
+		"typeIntervenant": "Ville de Montréal"
+	},
+	{
+		"username": "Levi Ackerman",
+		"password": "$2a$10$JjxZrCdv9qYb7AUp6I7oKO/1LW6I6ruuQpem3nw3O3EzQ5r0V1QKS",
+		"email": "levi.ackerman@gmail.com",
+		"phone": "5141234567",
+		"address": "Paradis Island",
+		"codePostal": "H1E2A9",
+		"quartier": "Rivière-des-Prairies-Pointe-aux-Trembles",
+		"key": null,
+		"age": 24,
+		"notifications": [
+			{
+				"id": "73b0c9a9-035e-4669-8c03-9f4651a3eac0",
+				"title": "Nouveau travail dans votre quartier",
+				"description": "Un nouveau projet \"Démolition Bibliothèque Rivière-des-Prairies\" a été ajouté dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles.",
+				"seen": true
+			},
+			{
+				"id": "c6a3ceb6-8e29-4367-ac4e-9ac1c7abeb33",
+				"title": "Mise-à-jour de projet dans votre quartier",
+				"description": "Le status du projet \"Démolition Bibliothèque Rivière-des-Prairies\" a été modifié dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles à [Prévu].",
+				"seen": false
+			}
+		],
+		"plagesHoraires": [
+			{
+				"jour": "MONDAY",
+				"heureDebut": [9, 0],
+				"heureFin": [12, 0]
+			},
+			{
+				"jour": "TUESDAY",
+				"heureDebut": [8, 0],
+				"heureFin": [18, 0]
+			}
+		],
+		"typeIntervenant": null
+	},
+	{
+		"username": "Alexandre",
+		"password": "$2a$10$.uMjwfa91F/59Do72/MDcekYAF4GbqycIj83YgJMb3AF9yBVVDKeS",
+		"email": "alexandre.bloodysoma@gmail.com",
+		"phone": null,
+		"address": null,
+		"codePostal": null,
+		"quartier": null,
+		"key": "key426139",
+		"age": 27,
+		"notifications": [],
+		"plagesHoraires": [],
+		"typeIntervenant": "Entrepreneur sous contrat avec la Ville de Montréal"
+	},
+	{
+		"username": "Samuel",
+		"password": "$2a$10$gK2Ps35Ivky6pSSkdEAS.uUXHsO43W32ARrMrAFfoRz1CETERv.me",
+		"email": "dawnsawnn@hotmail.com",
+		"phone": null,
+		"address": null,
+		"codePostal": null,
+		"quartier": null,
+		"key": "5551903",
+		"age": 24,
+		"notifications": [],
+		"plagesHoraires": [],
+		"typeIntervenant": "Entrepreneur sous contrat avec la Ville de Montréal"
+	},
+	{
+		"username": "Gojo Satoru",
+		"password": "$2a$10$x/u5F5KQCtiMhu4Dr8TbNeBcDk4yzSVLwDqJFSfnn3mbfF7qEy5Km",
+		"email": "gojo.satoru@yahoo.com",
+		"phone": "5140000000",
+		"address": "Jujutsu High",
+		"codePostal": "H1E 3E2",
+		"quartier": "Rivière-des-Prairies-Pointe-aux-Trembles",
+		"key": null,
+		"age": 25,
+		"notifications": [
+			{
+				"id": "ad0b663b-3725-40be-bffd-2ef2f4e0e918",
+				"title": "Mise-à-jour de projet dans votre quartier",
+				"description": "Le status du projet \"Démolition Bibliothèque Rivière-des-Prairies\" a été modifié dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles à [En cours].",
+				"seen": false
+			},
+			{
+				"id": "0fd0fc3e-7ab0-4bf6-ac73-a43454df5ef4",
+				"title": "Nouveau travail dans votre quartier",
+				"description": "Un nouveau projet \"Projet random\" a été ajouté dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles.",
+				"seen": false
+			},
+			{
+				"id": "bda2374c-8dad-495a-b642-f8415030ec37",
+				"title": "Mise-à-jour de projet dans votre quartier",
+				"description": "Le status du projet \"Projet random\" a été modifié dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles à [{\"statut\":\"En cours\"}].",
+				"seen": false
+			},
+			{
+				"id": "9c4214eb-2bed-41aa-bbd3-38166869dd07",
+				"title": "Nouveau travail dans votre quartier",
+				"description": "Un nouveau projet \"asdw\" a été ajouté dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles.",
+				"seen": false
+			},
+			{
+				"id": "27365d9a-0240-46ba-ad8f-109409421884",
+				"title": "Mise-à-jour de projet dans votre quartier",
+				"description": "Le status du projet \"asdw\" a été modifié dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles à [{\"statut\":\"En cours\"}].",
+				"seen": false
+			},
+			{
+				"id": "029cf1fe-ae08-474c-bf22-7e85c21dccf6",
+				"title": "Projet terminé dans votre quartier",
+				"description": "Le projet \"asdw\" a été terminé dans votre quartier.",
+				"seen": false
+			},
+			{
+				"id": "163c69be-25dd-412d-9bc9-43cf38e32b78",
+				"title": "Nouveau travail dans votre quartier",
+				"description": "Un nouveau projet \"asdfqwadd\" a été ajouté dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles.",
+				"seen": false
+			},
+			{
+				"id": "de77a517-5d5c-44b2-bef1-7150c7f6c24c",
+				"title": "Mise-à-jour de projet dans votre quartier",
+				"description": "Le status du projet \"asdfqwadd\" a été modifié dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles à [{\"statut\":\"En cours\"}].",
+				"seen": false
+			},
+			{
+				"id": "745d0cfa-db29-455f-91be-13d2b7c6e0c6",
+				"title": "Mise-à-jour de projet dans votre quartier",
+				"description": "Le status du projet \"asdfqwadd\" a été modifié dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles à [En cours].",
+				"seen": false
+			},
+			{
+				"id": "71d07703-90ed-4a24-ac8f-afafb7ac1f3d",
+				"title": "Nouveau travail dans votre quartier",
+				"description": "Un nouveau projet \"aaaaaaaaaaaa\" a été ajouté dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles.",
+				"seen": false
+			},
+			{
+				"id": "ad5111a8-f892-4873-ac73-741b5eeb779f",
+				"title": "Projet terminé dans votre quartier",
+				"description": "Le projet \"asdfqwadd\" a été terminé dans votre quartier.",
+				"seen": false
+			},
+			{
+				"id": "5dd9ab26-38f9-434e-892d-38b28426b018",
+				"title": "Mise-à-jour de projet dans votre quartier",
+				"description": "Le status du projet \"aaaaaaaaaaaa\" a été modifié dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles à [En cours].",
+				"seen": false
+			},
+			{
+				"id": "9cab2c50-f86f-4154-9b45-6d61e65585a1",
+				"title": "Mise-à-jour de projet dans votre quartier",
+				"description": "Le status du projet \"aaaaaaaaaaaa\" a été modifié dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles à [Terminé].",
+				"seen": false
+			},
+			{
+				"id": "42c70614-a757-4687-87ec-bb42f2ab71a1",
+				"title": "Projet terminé dans votre quartier",
+				"description": "Le projet \"aaaaaaaaaaaa\" a été terminé dans votre quartier.",
+				"seen": false
+			},
+			{
+				"id": "25d48277-a1bd-48bf-8808-a992b5c93c7f",
+				"title": "Nouveau travail dans votre quartier",
+				"description": "Un nouveau projet \"Demolition\" a été ajouté dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles.",
+				"seen": false
+			},
+			{
+				"id": "97a419a8-0e4b-423a-bde1-fc7dd947e6df",
+				"title": "Mise-à-jour de projet dans votre quartier",
+				"description": "Le status du projet \"Demolition\" a été modifié dans votre quartier Rivière-des-Prairies-Pointe-aux-Trembles à [En cours].",
+				"seen": false
+			}
+		],
+		"plagesHoraires": [],
+		"typeIntervenant": null
+	},
+	{
+		"username": "Jotaro Kujo",
+		"password": "$2a$10$fNlKI6XGohRzKndpCGhLG.thonGIQpqm2F6ANxY/gceKQt/xJgzUW",
+		"email": "jotaro.kujo@gmail.com",
+		"phone": "5147777490",
+		"address": "1234 Plateau Mont-Royal",
+		"codePostal": "H2H0A1",
+		"quartier": "Le Plateau-Mont-Royal",
+		"key": null,
+		"age": 27,
+		"notifications": [],
+		"plagesHoraires": [],
+		"typeIntervenant": null
+	},
+	{
+		"username": "Caitlyn",
+		"password": "$2a$10$Y.DDf6s1UDdKYGq4qDOnou5.9/G8UMVx2JuJZw/tVmLWySnmIkOGi",
+		"email": "caitlyn@hotmail.com",
+		"phone": "5144759032",
+		"address": "239 8e avenue",
+		"codePostal": "h2v 0a6",
+		"quartier": "Outremont",
+		"key": null,
+		"age": 24,
+		"notifications": [],
+		"plagesHoraires": [],
+		"typeIntervenant": null
+	},
+	{
+		"username": "Black Panther",
+		"password": "$2a$10$5ptHMQs13WwX0sz6Bobnk.eoBz/MLsAcjhko7Tdq95NZGfBGZ4RqS",
+		"email": "black.panther@gmail.com",
+		"phone": "5140009000",
+		"address": "127 Wakanda Street",
+		"codePostal": "H1L 3L6",
+		"quartier": "Mercier-Hochelaga-Maisonneuve",
+		"key": null,
+		"age": 37,
+		"notifications": [],
+		"plagesHoraires": [],
+		"typeIntervenant": null
+	},
+	{
+		"username": "God",
+		"password": "$2a$10$a.Q4BCbqBrX2T1PaKNFvKeUOQU53iBl5icPHrqNiZ1bqVynPRr7jO",
+		"email": "god@gmail.com",
+		"phone": null,
+		"address": null,
+		"codePostal": null,
+		"quartier": null,
+		"key": "infinity",
+		"age": 2013,
+		"notifications": [],
+		"plagesHoraires": [],
+		"typeIntervenant": "Entreprise privé"
+	}
+]
