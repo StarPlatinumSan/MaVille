@@ -1,20 +1,18 @@
 FROM eclipse-temurin:17-jdk
 
-# Set the working directory
 WORKDIR /app
 
-# Copy the project files
+# Copy project files and build the project
 COPY . /app
-
-# Ensure Maven wrapper has execution permissions
 RUN chmod +x mvnw
-
-# Build the project using Maven
 RUN ./mvnw clean install -DskipTests
 
-# Expose the application's port
+# Expose the port
 EXPOSE 8080
 
-# Run the Spring Boot application
-CMD ["java", "-jar", "target/*.jar"]
+# Replace "your-app-name" with the actual name of the JAR file generated
+CMD ["java", "-jar", "target/demo-0.0.1-SNAPSHOT.jar"]
+
+
+
 
