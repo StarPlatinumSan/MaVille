@@ -27,7 +27,7 @@ function Requete() {
 		try {
 			const formInfo = { ...formData, email: auth.user.email };
 
-			const response = await axios.post("${process.env.REACT_APP_API_URL}/api/requetes", formInfo);
+			const response = await axios.post(`${process.env.VITE_API_URL}/api/requetes`, formInfo);
 			setMessage("La requête a été envoyée avec succès !");
 			alert("La requête a été envoyée avec succès !");
 			setFormData({

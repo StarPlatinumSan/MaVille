@@ -10,11 +10,12 @@ function Plage() {
 
 	const { auth } = useContext(AuthContext);
 	const userEmail = auth.user.email;
+	const apiBaseUrl = import.meta.env.VITE_API_URL;
 
 	useEffect(() => {
 		// Récupérer les plages horaires depuis le backend
 		axios
-			.get("/api/users/plages", {
+			.get(`${apiBaseUrl}/api/users/plages`, {
 				params: {
 					email: userEmail,
 				},
@@ -44,7 +45,7 @@ function Plage() {
 		// Ajouter une nouvelle plage via API
 		axios
 			.post(
-				"/api/users/plages",
+				`${apiBaseUrl}/api/users/plages`,
 				{
 					jour,
 					heureDebut,
@@ -60,7 +61,7 @@ function Plage() {
 				alert("Plage ajoutée avec succès !");
 				// Recharger les plages après ajout
 				axios
-					.get("/api/users/plages", {
+					.get(`${apiBaseUrl}/api/users/plages`, {
 						params: {
 							email: userEmail,
 						},
@@ -76,7 +77,7 @@ function Plage() {
 
 	const supprimerPlage = (plage) => {
 		axios
-			.delete("/api/users/plages", {
+			.delete(`${apiBaseUrl}/api/users/plages`, {
 				data: plage,
 				params: {
 					email: userEmail,

@@ -14,6 +14,7 @@ const Soumettre = () => {
 	const [message, setMessage] = useState(null);
 	const [dateError, setDateError] = useState("");
 	const [conflits, setConflits] = useState([]);
+	const apiBaseUrl = import.meta.env.VITE_API_URL;
 
 	const validateDates = () => {
 		const today = new Date();
@@ -40,7 +41,7 @@ const Soumettre = () => {
 		if (!arrondissement) return [];
 
 		try {
-			const response = await axios.get(`/api/users/plages/quartier?quartier=${arrondissement}`);
+			const response = await axios.get(`${apiBaseUrl}/api/users/plages/quartier?quartier=${arrondissement}`);
 			const plages = response.data;
 
 			const conflitsTrouves = plages

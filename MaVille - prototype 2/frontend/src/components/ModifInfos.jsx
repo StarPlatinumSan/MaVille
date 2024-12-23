@@ -7,11 +7,12 @@ const ModifInfos = () => {
 	const [projets, setProjets] = useState([]);
 	const [statutModifie, setStatutModifie] = useState({});
 	const [message, setMessage] = useState(null);
+	const apiBaseUrl = import.meta.env.VITE_API_URL;
 
 	useEffect(() => {
 		const fetchProjets = async () => {
 			try {
-				const response = await fetch("/api/projets");
+				const response = await fetch(`${apiBaseUrl}/api/projets`);
 				if (response.ok) {
 					const data = await response.json();
 					const filteredData = data.filter((projet) => projet.nomIntervenant === auth.user.username);
@@ -39,7 +40,7 @@ const ModifInfos = () => {
 		}
 
 		try {
-			const response = await fetch(`/api/projets/${id}`, {
+			const response = await fetch(`${apiBaseUrl}/api/projets/${id}`, {
 				method: "PUT",
 				headers: { "Content-Type": "text/plain" },
 				body: nouveauStatut,
@@ -61,7 +62,7 @@ const ModifInfos = () => {
 
 	const handleDeleteProjet = async (id) => {
 		try {
-			const response = await fetch(`/api/projets/${id}`, {
+			const response = await fetch(`${apiBaseUrl}/api/projets/${id}`, {
 				method: "DELETE",
 			});
 

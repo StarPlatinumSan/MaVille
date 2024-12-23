@@ -7,7 +7,7 @@ function Lobby() {
 	const [showRegister, setShowRegister] = useState(false);
 
 	useEffect(() => {
-		fetch("${process.env.REACT_APP_API_URL}/api/message")
+		fetch(`${process.env.VITE_API_URL}/api/message`)
 			.then((response) => {
 				if (!response.ok) {
 					throw new Error(`HTTP error! status: ${response.status}`);

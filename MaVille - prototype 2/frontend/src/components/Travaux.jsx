@@ -14,7 +14,7 @@ function Travaux() {
 	useEffect(() => {
 		const fetchTravaux = async () => {
 			try {
-				const travauxResponse = await axios.get("${process.env.REACT_APP_API_URL}/api/travaux");
+				const travauxResponse = await axios.get(`${process.env.VITE_API_URL}/api/travaux`);
 				setTravaux(travauxResponse.data.result.records);
 			} catch (error) {
 				console.error("Erreur lors de la récupération des travaux :", error);
@@ -23,7 +23,7 @@ function Travaux() {
 
 		const fetchProjets = async () => {
 			try {
-				const response = await fetch("/api/projets");
+				const response = await fetch(`${process.env.VITE_API_URL}/api/projets`);
 				const data = await response.json();
 				setProjets(data);
 			} catch (error) {
