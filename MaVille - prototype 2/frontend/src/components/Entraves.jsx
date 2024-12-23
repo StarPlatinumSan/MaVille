@@ -9,7 +9,7 @@ function Entraves() {
 	useEffect(() => {
 		const fetchEntraves = async () => {
 			try {
-				const response = await axios.get(`${process.env.VITE_API_URL}/api/entraves`);
+				const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/entraves`);
 				setEntraves(response.data.result.records);
 				setLoading(false);
 			} catch (error) {

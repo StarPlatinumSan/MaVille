@@ -9,7 +9,7 @@ function MesRequetes() {
 	useEffect(() => {
 		const fetchMesRequetes = async () => {
 			try {
-				const response = await axios.get(`${process.env.VITE_API_URL}/api/users/requetes`, {
+				const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/requetes`, {
 					params: { email: auth.user.email },
 				});
 				setMesRequetes(response.data);
@@ -23,7 +23,7 @@ function MesRequetes() {
 
 	const accepterSoumission = async (id) => {
 		try {
-			await axios.post(`${process.env.VITE_API_URL}/api/requetes/${id}/accept`, {}, { params: { email: auth.user.email } });
+			await axios.post(`${import.meta.env.VITE_API_URL}/api/requetes/${id}/accept`, {}, { params: { email: auth.user.email } });
 
 			setMesRequetes((prevRequetes) => prevRequetes.map((requete) => (requete.id === id ? { ...requete, isAccepted: true } : requete)));
 
@@ -36,7 +36,7 @@ function MesRequetes() {
 
 	const fermerRequete = async (id) => {
 		try {
-			await axios.delete(`${process.env.VITE_API_URL}/api/requetes/${id}`);
+			await axios.delete(`${import.meta.env.VITE_API_URL}/api/requetes/${id}`);
 
 			setMesRequetes((prevRequetes) => prevRequetes.filter((requete) => requete.id !== id));
 

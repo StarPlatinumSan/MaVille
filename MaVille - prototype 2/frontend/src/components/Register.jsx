@@ -26,7 +26,7 @@ function Register() {
 		const user = type === "resident" ? { username, password, age, email, phone, address, codePostal } : { username, password, age, email, key, typeIntervenant: categorieIntervenant };
 
 		try {
-			const response = await axios.post(`${process.env.VITE_API_URL}/api/auth/register`, user);
+			const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, user);
 			setMessage(response.data);
 			setTimeout(() => {
 				setMessage(null);
