@@ -1,0 +1,6 @@
+target/
+.mvn/
+.git/
+.idea/
+node_modules/
+docker-compose.yml
