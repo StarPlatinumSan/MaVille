@@ -10,7 +10,7 @@ function Notifications() {
 	useEffect(() => {
 		const fetchNotifications = async () => {
 			try {
-				const response = await axios.get(`http://localhost:8080/api/users/notifications`, {
+				const response = await axios.get("${process.env.REACT_APP_API_URL}/api/users/notifications", {
 					params: { email: auth.user.email },
 				});
 				setNotifications(response.data);
@@ -27,7 +27,7 @@ function Notifications() {
 
 		if (unseenIds.length > 0) {
 			try {
-				await axios.post(`http://localhost:8080/api/users/notifications/vu`, unseenIds, {
+				await axios.post("${process.env.REACT_APP_API_URL}/api/users/notifications/vu", unseenIds, {
 					params: { email: auth.user.email },
 				});
 
@@ -40,7 +40,7 @@ function Notifications() {
 
 	const markAsSeenIndividual = async (notificationId) => {
 		try {
-			await axios.post(`http://localhost:8080/api/users/notifications/vu`, [notificationId], {
+			await axios.post("${process.env.REACT_APP_API_URL}/api/users/notifications/vu", [notificationId], {
 				params: { email: auth.user.email },
 			});
 
@@ -56,7 +56,7 @@ function Notifications() {
 			const updatedNotifications = notifications.filter((notification) => notification.id !== notificationId);
 			setNotifications(updatedNotifications);
 
-			await axios.put(`http://localhost:8080/api/users/notifications`, updatedNotifications, {
+			await axios.put("${process.env.REACT_APP_API_URL}/api/users/notifications", updatedNotifications, {
 				params: { email: auth.user.email },
 			});
 		} catch (error) {

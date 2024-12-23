@@ -8,7 +8,7 @@ function ListeRequetes() {
 
 	useEffect(() => {
 		const fetchRequetes = async () => {
-			const response = await axios.get("http://localhost:8080/api/requetes");
+			const response = await axios.get("${process.env.REACT_APP_API_URL}/api/requetes");
 			setRequetes(response.data);
 		};
 		fetchRequetes();
@@ -17,7 +17,7 @@ function ListeRequetes() {
 	const soumissionner = async (id) => {
 		try {
 			await axios.post(
-				`http://localhost:8080/api/requetes/${id}/soumissionner`,
+				"${process.env.REACT_APP_API_URL}/api/requetes/${id}/soumissionner",
 				{},
 				{
 					params: { intervenantEmail: auth.user.email },
@@ -36,7 +36,7 @@ function ListeRequetes() {
 	const annulerSoumission = async (id) => {
 		try {
 			await axios.post(
-				`http://localhost:8080/api/requetes/${id}/unsoumissionner`,
+				"${process.env.REACT_APP_API_URL}/api/requetes/${id}/unsoumissionner",
 				{}, // Corps vide car nous utilisons des paramètres
 				{
 					params: { intervenantEmail: auth.user.email }, // Ajout des paramètres ici
@@ -53,7 +53,7 @@ function ListeRequetes() {
 
 	const accepterSoumission = async (id) => {
 		try {
-			await axios.post(`http://localhost:8080/api/requetes/${id}/accept`, {
+			await axios.post("${process.env.REACT_APP_API_URL}/api/requetes/${id}/accept", {
 				email: auth.user.email,
 			});
 			alert("Soumission acceptée !");
@@ -65,7 +65,7 @@ function ListeRequetes() {
 	const confirmerCandidature = async (id) => {
 		try {
 			await axios.post(
-				`http://localhost:8080/api/requetes/${id}/confirmer`,
+				"${process.env.REACT_APP_API_URL}/api/requetes/${id}/confirmer",
 				{}, // Corps vide
 				{
 					params: { intervenantEmail: auth.user.email }, // Passer l'email de l'intervenant

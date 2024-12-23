@@ -14,7 +14,7 @@ function Travaux() {
 	useEffect(() => {
 		const fetchTravaux = async () => {
 			try {
-				const travauxResponse = await axios.get("http://localhost:8080/api/travaux");
+				const travauxResponse = await axios.get("${process.env.REACT_APP_API_URL}/api/travaux");
 				setTravaux(travauxResponse.data.result.records);
 			} catch (error) {
 				console.error("Erreur lors de la récupération des travaux :", error);
