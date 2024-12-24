@@ -21,7 +21,6 @@ function Login() {
 		try {
 			const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, user);
 			setMessage(response.data);
-			console.log("VITE_API_URL in production:", import.meta.env.VITE_API_URL);
 
 			if (response.data.message === "Connexion réussie.") {
 				loginUser({
