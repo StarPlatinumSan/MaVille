@@ -23,7 +23,8 @@
 	align-items: center;
 	gap: 1rem;
 	padding: 1rem;
-	width: 100vw;
+	width: 100%;
+	height: calc(100vh - env(safe-area-inset-top));
 	position: absolute;
 	left: 0;
 	top: 0;
