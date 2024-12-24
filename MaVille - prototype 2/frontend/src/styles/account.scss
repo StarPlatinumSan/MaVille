@@ -186,7 +186,7 @@
 }
 
 .notification {
-	background-image: url(../../public/notif.png);
+	background-image: url("/notif.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -301,42 +301,42 @@
 }
 
 #listeTravauxImg {
-	background-image: url(../../public/listeTravaux.webp);
+	background-image: url("/listeTravaux.webp");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 #entravesImg {
-	background-image: url(../../public/entraves.jpg);
+	background-image: url("/entraves.jpg");
 	background-position: right center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 #requeteImg {
-	background-image: url(../../public/requetes.jpg);
+	background-image: url("/requetes.jpg");
 	background-position: left center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 #plageImg {
-	background-image: url(../../public/plage.jpg);
+	background-image: url("/plage.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 #mesRequetesImg {
-	background-image: url(../../public/mesRequetes.webp);
+	background-image: url("/mesRequetes.webp");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .closeSideBar {
-	background-image: url(../../public/close.svg);
+	background-image: url("/close.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 	position: absolute;
@@ -356,7 +356,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background-image: url(../../public/menu.svg);
+		background-image: url("/menu.svg");
 		gap: 1rem;
 		height: 40px;
 		width: 40px;
@@ -492,7 +492,7 @@
 	.btnCloseNotif {
 		border: none;
 		background-color: inherit;
-		background-image: url(../../public/notifClose.svg);
+		background-image: url("/notifClose.svg");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 150%;

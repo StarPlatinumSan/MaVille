@@ -52,7 +52,7 @@ function Account() {
 			const menuMobile = document.querySelector(".menuMobile");
 			if (window.innerWidth > 900) {
 				sideBar.classList.remove("open");
-				menuMobile.style.backgroundImage = "url(../../public/menu.svg)";
+				menuMobile.style.backgroundImage = "url('/menu.svg')";
 				menuMobile.style.width = "40px";
 				menuMobile.style.height = "40px";
 			}
@@ -115,7 +115,7 @@ function Account() {
 		const sideBar = document.querySelector(".sideBar");
 		const menuMobile = document.querySelector(".menuMobile");
 		sideBar.classList.remove("open");
-		menuMobile.style.backgroundImage = "url(../../public/menu.svg)";
+		menuMobile.style.backgroundImage = "url('/menu.svg')";
 		menuMobile.style.width = "40px";
 		menuMobile.style.height = "40px";
 	};
