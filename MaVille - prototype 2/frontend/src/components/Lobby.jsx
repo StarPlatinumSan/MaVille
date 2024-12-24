@@ -22,6 +22,8 @@ function Lobby() {
 		const leftSide = document.querySelector(".leftSide");
 		setShowLogin(bool);
 
+		console.log("VITE_API_URL:", import.meta.env.VITE_API_URL);
+
 		if (bool) {
 			leftSide.style.display = "none";
 		} else {
